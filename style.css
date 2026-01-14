@@ -1,0 +1,131 @@
+/* Isso reseta as margens do navegador */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fdf2f8; /* Um rosa bem clarinho */
+    text-align: center;
+}
+
+header {
+    background-color: #bc3af8; /* Roxo */
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Organiza os produtos lado a lado */
+.vitrine {
+    display: flex;
+    flex-wrap: wrap; /* Se não couber, desce pra linha de baixo */
+    justify-content: center; /* Centraliza tudo */
+    gap: 20px; /* Espaço entre as pulseiras */
+    padding: 20px;
+}
+
+/* O cartão de cada pulseira */
+.card-produto {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 250px; /* Largura do cartão */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s; /* Animação suave */
+}
+
+/* Efeito quando passa o mouse */
+.card-produto:hover {
+    transform: scale(1.05); /* Cresce um pouquinho */
+}
+
+.card-produto img {
+    width: 100%; /* A imagem ocupa 100% do cartão */
+    border-radius: 10px;
+}
+
+.preco {
+    font-weight: bold;
+    color: #db2777;
+    font-size: 1.2em;
+}
+
+/* O botão do Zap */
+.botao-compra {
+    display: block;
+    background-color: #25D366; /* Verde do WhatsApp */
+    color: white;
+    text-decoration: none; /* Tira o sublinhado */
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.botao-compra:hover {
+    background-color: #128C7E; /* Verde mais escuro ao passar o mouse */
+}
+
+/* Estilo para centralizar e controlar o tamanho da logo */
+.minha-logo {
+    max-width: 200px; /* Isso limita a largura para não ficar gigante */
+    height: auto;     /* Mantém a proporção correta */
+    margin-bottom: 10px; /* Dá um espacinho pro texto de baixo */
+    border-radius: 50%; /* DICA: Se a logo for quadrada, isso deixa ela redondinha! Se não quiser redonda, apague essa linha */
+    border: 3px solid white; /* Uma borda branca pra destacar */
+}
+
+footer {
+    background-color: #bc3af8; /* A cor roxa que você escolheu */
+    color: white; /* Texto branco para dar leitura em cima do roxo */
+    padding: 30px 20px; /* Espaçamento interno pra não ficar apertado */
+    margin-top: 40px; /* Empurra o rodapé pra baixo, separando dos produtos */
+}
+
+/
+    color: #fdf2f8; /* Um branco meio rosado, ou use white mesmo */
+    text-decoration: underline;
+}
+
+.link-dev:hover {
+    color: #ffe4e6; /* Fica mais claro quando passa o mouse */
+}
+}
+
+/* A caixa dos seus créditos */
+.creditos-dev {
+    font-size: 0.9em; /* Letra um pouquinho menor */
+    opacity: 0.9; /* Levemente transparente */
+    margin-top: 10px;
+}
+
+.link-dev:hover {
+    text-decoration: underline; /* Sublinha quando passa o mouse */
+}
+
+/* Isso garante que o rodapé "abrace" todo o conteúdo sem deixar buracos */
+footer {
+    overflow: hidden; 
+}
+
+/* Tira a margem padrão que as vezes cria essa faixa branca */
+footer p {
+    margin: 0;
+    padding: 10px 0; /* Dá um respiro interno em vez de margem externa */
+}
+
+/* O texto grande da entrega */
+.destaque-entrega {
+    font-size: 1.5em; /* Aumenta o tamanho da letra (1.5x o normal) */
+    font-weight: bold; /* Deixa em negrito */
+    margin-bottom: 20px; /* Dá um espaço maior para os créditos não ficarem grudados */
+    letter-spacing: 1px; /* Separa um pouquinho as letras pra ficar chique */
+}
+
+/* Os seus créditos (menores e discretos) */
+.creditos-dev {
+    font-size: 0.8em; /* Diminui a letra (0.8x o normal) */
+    opacity: 0.8; /* Deixa levemente transparente para não brigar com o texto principal */
+}
+
+.creditos-dev p {
+    margin: 5px 0; /* Aproxima as linhas do seu nome e telefone */
+}

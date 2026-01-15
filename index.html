@@ -6,8 +6,30 @@
     <title>Mari Acessórios</title>
 <link rel="shortcut icon" href="img/logo.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<meta property="og:title" content="Mari Acessórios - Pulseiras e Miçangas">
+<meta property="og:description" content="Pulseiras lindas feitas à mão em Bragança Paulista. Encomende a sua!">
+<meta property="og:image" content="https://tassobr.github.io/MariAcessorios/img/logo.png"> <meta property="og:url" content="https://tassobr.github.io/MariAcessorios/">
+<meta property="og:type" content="website">
+<script>
+    function mudarFoto(botao, direcao) {
+        // Encontra o carrossel que está junto com o botão clicado
+        const container = botao.parentElement.querySelector('.carrossel');
+        
+        // Descobre a largura da imagem para saber quanto rolar
+        const larguraImagem = container.offsetWidth;
+
+        // Rola para a esquerda (-1) ou direita (1)
+        container.scrollBy({
+            left: direcao * larguraImagem,
+            behavior: 'smooth' // Rola suavemente
+        });
+    }
+</script>
+</body> 
 
     <header>
         <div class="logo-container">
@@ -36,6 +58,128 @@
                 Comprar no WhatsApp
             </a>
         </div>
+
+        <div class="card-produto">
+            <img src="img/PulseirasHeroi.jpeg" alt="Foto Pulseiras de Heroi">
+            <h3>Pulseira de Herói</h3>
+            <p class="preco">R$ 10,00</p>
+            <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira de Herói" class="botao-compra" target="_blank">
+                Comprar no WhatsApp
+            </a>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/PulseiraConcha.jpeg" alt="Foto da Pulseira de Concha">
+            <h3>Pulseira de Concha</h3>
+            <p class="preco">R$ 10,00</p>
+            <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira de Concha" class="botao-compra" target="_blank">
+                Comprar no WhatsApp
+            </a>
+        </div>
+
+        <div class="card-produto">
+            <div class="container-foto">
+            <button class="seta esquerda" onclick="mudarFoto(this, -1)">&#10094;</button>
+            <div class="carrossel">
+            <img src="img/PulseiraPerolaTtk.jpeg" alt="TikTok">
+            <img src="img/PulseiraPerola.jpeg" alt="Perola">
+            
+        </div>
+
+        <button class="seta direita" onclick="mudarFoto(this, 1)">&#10095;</button>
+    
+    </div>
+
+    <h3>Pulseira de Pérola</h3>
+    <p class="preco">R$ 10,00</p>
+    
+    <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira de Pérola" class="botao-compra">Comprar no WhatsApp</a>
+</div>
+
+        <div class="card-produto">
+            <img src="img/PulseiraFloresEstrelaMar.jpeg" alt="Foto da Pulseira de Flores com Estrela do Mar">
+            <h3>Pulseira de Flores com Estrela do Mar</h3>
+            <p class="preco">R$ 10,00</p>
+            <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira de Flores com Estrela do Mar" class="botao-compra" target="_blank">
+                Comprar no WhatsApp
+            </a>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/PulseiraColoridaFlor.jpeg" alt="Foto da Pulseira Colorida com Detalhes de Flor">
+            <h3>Pulseira Colorida com Detalhes de Flor</h3>
+            <p class="preco">R$ 10,00</p>
+            <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira colorida com detalhes de flor" class="botao-compra" target="_blank">
+                Comprar no WhatsApp
+            </a>
+        </div>
+
+<div class="card-produto">
+            <img src="img/PulseiraUrsinho.jpeg" alt="Foto da Pulseira de Ursinho">
+            <h3>Pulseira de Ursinho</h3>
+            <p class="preco">R$ 10,00</p>
+            <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira de ursinho" class="botao-compra" target="_blank">
+                Comprar no WhatsApp
+            </a>
+        </div>
+
+<div class="card-produto">
+            <div class="container-foto">
+            <button class="seta esquerda" onclick="mudarFoto(this, -1)">&#10094;</button>
+            <div class="carrossel">
+            <img src="img/PulseiraEscrita.jpeg" alt="Laranja">
+            <img src="img/PulseiraEscrita1.jpeg" alt="Amarela">
+            
+        </div>
+
+        <button class="seta direita" onclick="mudarFoto(this, 1)">&#10095;</button>
+    
+    </div>
+
+    <h3>Pulseira com Escrita</h3>
+    <p class="preco">R$ 10,00</p>
+    
+    <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira com escrita" class="botao-compra">Comprar no WhatsApp</a>
+</div>
+
+        <div class="card-produto">
+            <img src="img/PulseiraEmojis.jpeg" alt="Foto da Pulseira de Emojis">
+            <h3>Pulseira de Emojis</h3>
+            <p class="preco">R$ 10,00</p>
+            <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira de emojis" class="botao-compra" target="_blank">
+                Comprar no WhatsApp
+            </a>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/PulseiraOlhoGrego.jpeg" alt="Foto da Pulseira de Olho Grego">
+            <h3>Pulseira de Olho Grego</h3>
+            <p class="preco">R$ 10,00</p>
+            <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira de olho grego" class="botao-compra" target="_blank">
+                Comprar no WhatsApp
+            </a>
+        </div>
+
+        <div class="card-produto">
+            <div class="container-foto">
+            <button class="seta esquerda" onclick="mudarFoto(this, -1)">&#10094;</button>
+            <div class="carrossel">
+            <img src="img/PulseiraPraiana.jpeg" alt="Praiana 3 Cores">
+            <img src="img/PulseiraPraiana1.jpeg" alt="Praiana Azul">
+            <img src="img/PulseiraPraiana2.jpeg" alt="Praiana Verde">
+            
+        </div>
+
+        <button class="seta direita" onclick="mudarFoto(this, 1)">&#10095;</button>
+    
+    </div>
+
+    <h3>Pulseira Praiana</h3>
+    <p class="preco">R$ 10,00</p>
+    
+    <a href="https://wa.me/+5511988961660?text=Oie! Quero a pulseira praiana" class="botao-compra">Comprar no WhatsApp</a>
+</div>
+
 
     </main>
 

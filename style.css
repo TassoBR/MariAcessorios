@@ -1,8 +1,9 @@
 /* Isso reseta as margens do navegador */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fdf2f8; /* Um rosa bem clarinho */
+    font-family: 'Poppins', sans-serif; /* A mágica acontece aqui */
+    background: linear-gradient(180deg, #fdf2f8 0%, #fff 100%); /* Um degradê suave no fundo */
+    color: #4a4a4a; /* Cinza escuro é mais elegante que preto puro */
     text-align: center;
 }
 
@@ -25,21 +26,28 @@ header {
 /* O cartão de cada pulseira */
 .card-produto {
     background: white;
-    border-radius: 15px;
-    padding: 15px;
-    width: 250px; /* Largura do cartão */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s; /* Animação suave */
+    border-radius: 20px; /* Bordas bem arredondadas */
+    padding: 20px;
+    width: 260px;
+    border: 1px solid #f0f0f0; /* Bordinha quase invisível */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Sombra difusa e elegante */
+    transition: all 0.3s ease; /* Animação suave pra tudo */
+    position: relative;
+    top: 0;
 }
 
-/* Efeito quando passa o mouse */
+/* Quando passar o mouse, o card "levanta" */
 .card-produto:hover {
-    transform: scale(1.05); /* Cresce um pouquinho */
+    top: -10px; /* Sobe um pouquinho */
+    box-shadow: 0 20px 40px rgba(188, 58, 248, 0.2); /* Sombra roxa brilhante */
 }
 
+/* Imagem mais bonita */
 .card-produto img {
-    width: 100%; /* A imagem ocupa 100% do cartão */
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover; /* Garante que a foto não estique */
+    margin-bottom: 10px;
 }
 
 .preco {
@@ -50,18 +58,22 @@ header {
 
 /* O botão do Zap */
 .botao-compra {
-    display: block;
-    background-color: #25D366; /* Verde do WhatsApp */
+    display: inline-block;
+    background-color: #25D366;
     color: white;
-    text-decoration: none; /* Tira o sublinhado */
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-top: 10px;
+    text-decoration: none;
+    padding: 12px 25px; /* Mais gordinho */
+    border-radius: 50px; /* Formato de pílula (super moderno) */
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); /* Sombra verde */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .botao-compra:hover {
-    background-color: #128C7E; /* Verde mais escuro ao passar o mouse */
+    background-color: #1ebc57;
+    transform: scale(1.05); /* Cresce um pouquinho */
 }
 
 /* Estilo para centralizar e controlar o tamanho da logo */
@@ -129,3 +141,67 @@ footer p {
 .creditos-dev p {
     margin: 5px 0; /* Aproxima as linhas do seu nome e telefone */
 }
+
+/* A janela que segura as imagens */
+.carrossel {
+    display: flex; /* Coloca as imagens uma do lado da outra */
+    overflow-x: auto; /* Permite rolar para o lado */
+    scroll-snap-type: x mandatory; /* OBRIGA a imagem a parar no lugar certo */
+    border-radius: 15px; /* Arredonda os cantos do carrossel */
+    margin-bottom: 10px;
+    
+    /* Esconde a barra de rolagem (Fica mais limpo) */
+    scrollbar-width: none; /* Para Firefox */
+}
+
+/* Esconde barra de rolagem no Chrome/Edge */
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+/* O estilo de cada imagem dentro do carrossel */
+.carrossel img {
+    flex: 0 0 90%; /* Cada imagem ocupa 100% da largura do card */
+    scroll-snap-align: start; /* Onde a imagem deve "imantar" */
+    width: 100%;
+    height: 250px; /* IMPORTANTE: Define uma altura fixa para todas ficarem iguais */
+    object-fit: cover; /* Corta a imagem para preencher o quadrado sem esticar */
+}
+
+/* Isso cria um efeito visual sutil */
+.card-produto {
+    position: relative;
+}
+
+/* A caixa que segura a imagem e as setas */
+.container-foto {
+    position: relative; /* Isso é essencial para as setas ficarem "presas" aqui dentro */
+}
+
+/* Estilo geral da seta */
+.seta {
+    position: absolute; /* Flutua em cima da imagem */
+    top: 50%; /* Fica no meio da altura */
+    transform: translateY(-50%); /* Ajuste fino pra centralizar exato */
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo preto transparente */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Garante que fique em cima da foto */
+    border-radius: 50%; /* Redondinha */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.seta:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fica mais escura quando passa o mouse */
+}
+
+/* Posições */
+.esquerda { left: 10px; }
+.direita { right: 10px; }
